@@ -93,11 +93,22 @@ IoU：
 
 ## 四、今天遇到的问题
 
-问题：
+问题：配置git环境变量的时候
 
 原因：
 
 解决：
+$gitPath = "D:\sofware\Git\cmd"
+
+$userPath = [Environment]::GetEnvironmentVariable("Path", "User")
+
+if ($userPath -notlike "*$gitPath*") {
+    [Environment]::SetEnvironmentVariable(
+        "Path",
+        "$userPath;$gitPath",
+        "User"
+    )
+}
 
 ---
 
