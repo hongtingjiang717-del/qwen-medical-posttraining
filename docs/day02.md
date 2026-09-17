@@ -93,10 +93,7 @@ IoU：
 
 ## 四、今天遇到的问题
 
-问题：配置git环境变量的时候
-
-原因：
-
+（1）问题：配置git环境变量的时候,没有设置成长期变量
 解决：
 $gitPath = "D:\sofware\Git\cmd"
 
@@ -109,6 +106,14 @@ if ($userPath -notlike "*$gitPath*") {
         "User"
     )
 }
+（2）问题：github接口不稳定，导致push的时候上不去
+解决：使用电脑的代理接口7897
+ git config --global http.proxy http://127.0.0.1:7897
+ （3）我注册git的时候使用的qq邮箱，所以在连接github的时候，自动连接的我的qq邮箱那个账号，而不是我目前在使用的谷歌账号的github,捣鼓了半天
+ （4）记录一些有关git的命令：
+ git status:查看还没有push 的文件
+ git add -m "day02:update learning notes":更新信息“”中的内容是写在日志中的，用来备注
+ git push -u origin main :上传
 
 ---
 
