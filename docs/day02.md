@@ -112,7 +112,10 @@ if ($userPath -notlike "*$gitPath*") {
  （3）我注册git的时候使用的qq邮箱，所以在连接github的时候，自动连接的我的qq邮箱那个账号，而不是我目前在使用的谷歌账号的github,捣鼓了半天
  （4）记录一些有关git的命令：
  git status:查看还没有push 的文件
- git add -m "day02:update learning notes":更新信息“”中的内容是写在日志中的，用来备注
+
+ git add docs/day02.md
+ git commit -m "day02:update learning notes":更新信息“”中的内容是写在日志中的，用来备注
+
  git push -u origin main :上传
 
 ---
@@ -120,9 +123,16 @@ if ($userPath -notlike "*$gitPath*") {
 ## 五、今天必须会回答的问题
 
 1. Dataset 是什么？
+Dataset 是对数据集的封装，告诉程序“数据有多少个”以及“给定一个索引，应该返回哪个样本及其标签”。
 2. DataLoader 是什么？
+DataLoader 是数据加载器，它从 Dataset 中批量读取数据，并负责 batch、shuffle、多进程加载等。
 3. batch 是什么？
+batch 是模型一次前向传播和反向传播所处理的一批样本。batch_size 表示每批有多少个样本。
 4. epoch 是什么？
+训练轮次，1 个 epoch = 整个训练集被模型完整学习一遍。
 5. loss.backward() 和 optimizer.step() 有什么区别？
+loss.backward()一个是反向传播，是用来计算梯度；optimizer.step()是根据计算出来的梯度更新参数的
 6. optimizer.zero_grad() 为什么需要？
+清空上一轮的梯度，不是参数。因为 PyTorch 默认会累积梯度。
 7. IoU 是什么？
+IoU = 预测区域与真实区域的交集 ÷ 两者的并集，用于衡量分割结果的重合程度。
