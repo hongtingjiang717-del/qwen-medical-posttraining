@@ -217,7 +217,8 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 
-(4)curl -I https://github.com  感觉像是刷新github网站的方法，帮助push
+(4)git ls-remote https://github.com/hongtingjiang717-del/qwen-medical-posttraining.git
+curl -I https://github.com  感觉像是刷新github网站的方法，帮助push
 (5)watch -n 0.5 nvidia-smi   训练过程中打开另一个终端，每0.5s更新一次，查看显存
 
 
