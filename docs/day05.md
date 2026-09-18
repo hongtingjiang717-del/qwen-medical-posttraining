@@ -220,6 +220,20 @@ no changes added to commit (use "git add" and/or "git commit -a")
 (4)git ls-remote https://github.com/hongtingjiang717-del/qwen-medical-posttraining.git
 curl -I https://github.com  感觉像是刷新github网站的方法，帮助push
 (5)watch -n 0.5 nvidia-smi   训练过程中打开另一个终端，每0.5s更新一次，查看显存
+(6)github上传了但是还没有更新？先把status清理干净
+(llm10d) PS D:\desktop\work-projects\qwen-medical-posttraining> git pull --rebase origin main 
+From https://github.com/hongtingjiang717-del/qwen-medical-posttraining
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+(llm10d) PS D:\desktop\work-projects\qwen-medical-posttraining> git push origin main
+Everything up-to-date
+(llm10d) PS D:\desktop\work-projects\qwen-medical-posttraining> git log --oneline -5
+e880008 (HEAD -> main, origin/main, origin/HEAD) finished_day04
+af30029 xiugaiday05
+a0e125f xiugai day05
+42a3179 chore: fix gitignore and separate pytorch project
+638488f feat:add LoRA SFT training pipeline
+(llm10d) PS D:\desktop\work-projects\qwen-medical-posttraining> 
 
 
 # Day05 - Qwen3 LoRA SFT Smoke Test
