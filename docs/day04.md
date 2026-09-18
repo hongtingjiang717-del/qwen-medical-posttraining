@@ -7,7 +7,7 @@ message:训练时的输入格式和推理时的输入格式最好保持一致
 
 ## 概念
 SFT--Supervised Fine-Tuning：监督微调
-PEFT---Parameter-Efficient Fine-Tuning：LoRA是PEFT最经典的方法之一。
+PEFT---Parameter-Efficient Fine-Tuning：LoRA是PEFT最经典的方法之一。只训练少量的adapter参数，而不是把整个17亿参数模型全部更新
 ## 重新梳理一下项目的逻辑
 baseline
    ↓
